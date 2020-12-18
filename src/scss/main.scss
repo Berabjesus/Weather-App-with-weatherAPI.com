@@ -1,6 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./reset.scss";
+@import "./mixinFunctions.scss";
+@import "./defaults.scss";
 
-
-// Test css rules :: To be deleted before merge to working branch
-
+.body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: lightblue;
+}

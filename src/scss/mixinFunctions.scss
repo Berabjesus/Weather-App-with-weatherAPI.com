@@ -1,0 +1,9 @@
+/*
+
+  =========== mixin functions ===========
+
+*/
+
+@mixin setBorder($width, $type, $color, $direction: "") {
+  border#{$direction}: $width $type $color;
+}

@@ -1,0 +1,12 @@
+/*
+
+  =========== Default values ===========
+
+*/
+@import "./mixinFunctions.scss";
+
+/*  Borders  */
+
+.custom-border {
+  @include setBorder(3px, dashed, red, '');
+}
