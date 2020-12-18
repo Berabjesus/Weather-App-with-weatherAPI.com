@@ -1,11 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./reset.scss";
-@import "./mixinFunctions.scss";
+@import "./mixin_functions.scss";
 @import "./defaults.scss";
+@import "./search_section.scss";
 
 .body {
-  padding-left: 100px;
   min-height: 100vh;
   width: 100vw;
-  background-color: lightblue;
 }

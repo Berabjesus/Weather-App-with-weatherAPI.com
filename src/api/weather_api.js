@@ -7,10 +7,5 @@ export const getWeeklyWeatherInfo = async city => {
   const deserializedResponse = await response.json()
   console.log(deserializedResponse);
   
-  return deserializedResponse
+  // return deserializedResponse
 }
-
-// getWeeklyWeatherInfo('addis ababa')
-
-// export default getWeeklyWeatherInfo2
-// getWeeklyWeatherInfo('addis ababa')

@@ -1,15 +1,8 @@
 import "@babel/polyfill";
 import 'bootstrap';
 import './scss/main.scss';
-import home from './page/home'
-
-// 
-
-// import {getWeeklyWeatherInfo as api} from './api/weather_api'
-import {getWeeklyWeatherInfo as wApi} from './api/weather_api'
-
-// wApi('addis ababa')
-// 
+import {section as search} from './page/search'
 
 const body = document.querySelector('.body')
-body.append(home())
+body.classList.add('custom-border')
+body.append()
