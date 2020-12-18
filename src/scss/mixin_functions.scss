@@ -9,13 +9,15 @@
 }
 
 @mixin glow-button($dimension,$color, $glow : rgba(240, 236, 248, 0.411)) {
-  position: relative;
+  position: absolute;
   width: $dimension;
   height: $dimension;
   border-radius: 50%;
   background-color: $color;
+  transition: all 0.2s linear;
   &::after{
     content: '';
+    @include setBorder(2px, solid, black);
     position: absolute;
     z-index: -1;
     width: 20px;
@@ -25,6 +27,10 @@
     border-radius: 50%;
     background-color: $glow;
     animation: grow 2s infinite ease-out;
+  }
+  &:hover::after {
+    background-color: rgb(63, 63, 13);
+    animation: grow 1s infinite ease-out;
   }
   @keyframes grow {
     50%{

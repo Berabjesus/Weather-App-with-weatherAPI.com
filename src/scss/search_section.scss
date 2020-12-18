@@ -16,11 +16,15 @@
 
 $button_size: 80px;
 .ss-custom-btn {
-  @include glow-button($button_size, #252E3F, #000000);
+  @include glow-button($button_size, #252E3F, #00000060);
   @include setBorder(1px, solid, white);
-  position: absolute;
   bottom: -#{$button_size / 2};
   left: calc(50% - #{$button_size / 2});
   color: white;
   font-size: 20px;
+  &:hover {
+    @include setBorder(3px, solid, white);
+    box-shadow: 1px 1px 10px rgba(41, 40, 40, 0.5);
+    font-size: 22px;
+  }
 }
