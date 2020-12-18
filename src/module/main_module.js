@@ -7,9 +7,10 @@ const module = (() => {
     define(element);
     return element;
   }
+
   return {
     is
   }
 })();
 
-export default module;
+export {module as it};
