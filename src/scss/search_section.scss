@@ -1,10 +1,20 @@
 @import "./mixin_functions.scss";
 
 .ss-search-container {
+  position: relative;
   height: 20vh;
 }
 
 .ss-input-form {
-  font-size: ;
+  font-size: 25px;
   border-radius: 20px;
+}
+
+$button_size: 10px;
+$left : (50% - $button_size);
+.ss-custom-btn {
+  @include glow-button($button_size, red);
+  position: absolute;
+  bottom: 0;
+  left: $button_size;
 }
