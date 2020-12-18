@@ -1,20 +1,26 @@
 @import "./mixin_functions.scss";
 
 .ss-search-container {
+  @include setBorder(3px, solid, black, '-bottom');
   position: relative;
-  height: 30vh;
+  height: 25vh;
+  box-shadow: inset 0px -15px 10px -15px rgba(41, 40, 40, 0.5);
 }
 
 .ss-input-form {
-  // flex: 0;
-  font-size: 35px;
+  @include setBorder(3px, solid, black);
+  text-align: center;
+  font-size: 30px;
   border-radius: 20px;
 }
 
-$button_size: 100px;
+$button_size: 80px;
 .ss-custom-btn {
-  @include glow-button($button_size, red);
+  @include glow-button($button_size, #252E3F, #000000);
+  @include setBorder(1px, solid, white);
   position: absolute;
   bottom: -#{$button_size / 2};
   left: calc(50% - #{$button_size / 2});
+  color: white;
+  font-size: 20px;
 }

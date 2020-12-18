@@ -8,7 +8,7 @@
   border#{$direction}: $width $type $color;
 }
 
-@mixin glow-button($dimension,$color) {
+@mixin glow-button($dimension,$color, $glow : rgba(240, 236, 248, 0.411)) {
   position: relative;
   width: $dimension;
   height: $dimension;
@@ -23,18 +23,18 @@
     top: calc(50% - 10px);
     left: calc(50% - 10px);
     border-radius: 50%;
-    background-color: rgba(240, 236, 248, 0.411);
+    background-color: $glow;
     animation: grow 2s infinite ease-out;
   }
   @keyframes grow {
     50%{
-      opacity: 0.5;
+      opacity: 0.3;
     }
     100% {
-      width: 160px;
-      height: 160px;
-      top: calc(50% - 80px);
-      left: calc(50% - 80px);
+      width: 130px;
+      height: 130px;
+      top: calc(50% - 65px);
+      left: calc(50% - 65px);
       opacity: 0;
     }
   }
