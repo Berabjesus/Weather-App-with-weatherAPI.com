@@ -5,5 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wea</title>
 </head>
-<body class="body"></body>
+<style>
+
+</style>
+<body class="body">
+
+  <form action="">
+    <input autocomplete="on" type="text" name="city" id="city" list="cityname" style="padding-bottom:1px;">
+    <datalist autocomplete="on" class="focus-off" id="cityname" style="background-color: yellow;">
+    </datalist>
+
+    <input type="button" value="search">
+    
+  </form>
+  <script>
+    var arr = ["bereket", "ababu", "behsane"]
+    const getArr = (val) => {
+      return new Promise((resolve, reject) => {
+        if (val) {
+          let search = []
+          arr.forEach(i => {
+              if(i.search(val) > -1){
+                search.push(i)
+              }
+            })
+            resolve(search);
+        }
+        else
+          reject('no input')
+      })
+    }
+    let input = document.getElementById('city')
+    input.addEventListener('keyup', () => {
+      // let v = await getArr(input.value).catch(err => {
+      //   // console.log(err);
+      // })
+        getArr(input.value)
+        .then(res => {
+          let cont = document.getElementById('cityname')
+          cont.innerHTML =''
+          res.forEach(name => {
+            let opt = document.createElement('option')
+            opt.innerText = name
+            cont.appendChild(opt)
+          })
+        })
+        .catch(err => {
+          console.log(err);
+        })
+      // console.log(v);
+    })
+
+
+  </script>
+</body>
 </html>
