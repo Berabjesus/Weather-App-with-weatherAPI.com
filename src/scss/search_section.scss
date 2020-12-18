@@ -2,18 +2,19 @@
 
 .ss-search-container {
   position: relative;
-  height: 20vh;
+  height: 30vh;
 }
 
 .ss-input-form {
+  flex: 0;
   font-size: 25px;
   border-radius: 20px;
 }
 
-$button_size: 10px;
+$button_size: 100px;
 .ss-custom-btn {
   @include glow-button($button_size, red);
   position: absolute;
-  bottom: 0;
-  left: calc(50% - #{$button_size});
+  bottom: -#{$button_size / 2};
+  left: calc(50% - #{$button_size / 2});
 }
