@@ -1,18 +1,19 @@
 import {it} from '../module/main_module'
+import {today, upcoming} from './raw_html'
 
 class Events {
   constructor() {
     this.weatherBox;
   }
 
-  setWeatherBox () {
+  setWeatherBox (){
     const container = it.is('div')
-    container.classes('weather-box')
+    container.classes('')
 
     this.weatherBox = container
   }
   
-  hideSearchBox() {
+  hideSearchBox(){
     const searchBox = document.querySelector('.ss-container')
     searchBox.style.height = '0px';
     searchBox.innerHTML = ''
@@ -21,8 +22,8 @@ class Events {
   }
 
   getInputAndSearch(){
-    const container = document.getElementById('infoContainer')
-    container.append(this.weatherBox)
+    const container = document.querySelector('.info-container')
+    container.innerHTML = today()
   }
 
   getApiAndRender(){

@@ -7,17 +7,19 @@
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   // background: radial-gradient(farthest-corner at 0vw 0vh,black 1%,#090325 100%)
-  background: linear-gradient(to bottom, black 1%,#090325 100%);
+  background:url('../media/wbg.png') no-repeat top, linear-gradient(to bottom, black 1%,#090325 100%);
+  background-size: cover;
+  background-clip: border-box;
 }
 
 $s1:"";
 $s2:"";
 $s3:"";
-@for $i from 1 through 50 {
-    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + wheat;
+@for $i from 1 through 200 {
+    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
     $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
     $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
-    @if $i < 50 {
+    @if $i < 200 {
         $s1: $s1 + ",";
         $s2: $s2 + ",";
         $s3: $s3 + ",";
@@ -27,7 +29,7 @@ $s3:"";
 .snow {
   z-index: -1;
   border-radius: 50%;
-  opacity: 0.8;
+  opacity: 0.7;
   position: absolute;
   top:-110vh;
   animation-name: fall;
@@ -37,7 +39,7 @@ $s3:"";
 .layer1 {
   width: 1.5rem;
   height: 1.5rem;
-  filter:blur(1px);
+  filter:blur(2px);
   box-shadow: #{$s1};
   animation-duration: 8s;
 }
@@ -48,7 +50,7 @@ $s3:"";
 .layer2 {
     width: 1.2rem;
     height: 1.2rem;
-    filter:blur(2px);
+    filter:blur(3px);
     box-shadow: #{$s2};
     animation-duration: 8s;
 }
@@ -58,7 +60,7 @@ $s3:"";
 .layer3 {
     width: 0.8rem;
     height: 0.8rem;
-    filter:blur(3px);
+    filter:blur(4px);
     box-shadow: #{$s3};
     animation-duration: 10s;
 }

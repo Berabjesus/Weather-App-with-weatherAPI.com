@@ -9,5 +9,9 @@
 }
 
 .weather-box {
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px black;
+  background-color: #fff;
+  min-height: 50vh;
   border: 3px dashed rgb(123, 255, 0);
 }

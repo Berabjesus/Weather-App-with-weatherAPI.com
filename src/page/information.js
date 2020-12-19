@@ -15,7 +15,7 @@ const snowContainer = () => {
 
 const section = () => {
   const container = it.is('section')
-  container.classes('row d-flex flex-column align-items-center is-container custom-border')
+  container.classes('row d-flex flex-column align-items-center is-container')
 
   const headerContainer = it.is('div')
   headerContainer.classes('text-center pt-5')
@@ -24,7 +24,7 @@ const section = () => {
   headerContainer.append(header)
 
   const InfoContainer = it.is('div')
-  InfoContainer.classes('col-12 col-md-9 d-flex flex-coulmn p-0 weather-box custom-border')
+  InfoContainer.classes('col-12 col-md-9 row d-flex flex-column p-0 info-container')
 
   container.append(snowContainer(),headerContainer, InfoContainer)
   return container
