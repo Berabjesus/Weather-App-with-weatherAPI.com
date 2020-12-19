@@ -15,11 +15,11 @@
 $s1:"";
 $s2:"";
 $s3:"";
-@for $i from 1 through 200 {
+@for $i from 1 through 30 {
     $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
     $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
     $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
-    @if $i < 200 {
+    @if $i < 30 {
         $s1: $s1 + ",";
         $s2: $s2 + ",";
         $s3: $s3 + ",";

@@ -22,7 +22,7 @@ class Events {
   }
 
   getInputAndSearch(){
-    const container = document.querySelector('.info-container')
+    const container = document.querySelector('.weatherbox-container')
     container.innerHTML = today()
   }
 

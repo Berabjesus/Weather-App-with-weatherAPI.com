@@ -28,10 +28,19 @@ const inputContainer = () => {
 const section = () => {
   const container = it.is('section')
   container.classes('d-flex flex-column w-100 ss-container')
-  const header = it.is('h2')
-  header.innerText = '< aurApp />'
 
-  container.append(header, inputContainer())
+  const headerContainer = it.is('div')
+  headerContainer.classes('d-flex flex-column pl-2')
+  const brand = it.is('h2')
+  brand.innerText = '< aurApp />'
+
+  const header = it.is('h6')
+  header.classes('text-dark mb-1')
+  header.innerText = 'Your Daily Weather Information'
+  headerContainer.append(brand, header)
+
+
+  container.append(headerContainer, inputContainer())
   return container
 }
 

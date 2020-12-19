@@ -17,16 +17,10 @@ const section = () => {
   const container = it.is('section')
   container.classes('row d-flex flex-column align-items-center is-container')
 
-  const headerContainer = it.is('div')
-  headerContainer.classes('text-center pt-5')
-  const header = it.is('h1')
-  header.innerText = 'Information goes in here'
-  headerContainer.append(header)
-
   const InfoContainer = it.is('div')
-  InfoContainer.classes('col-12 col-md-9 row d-flex flex-column p-0 info-container')
+  InfoContainer.classes('col-12 col-md-9 row d-flex flex-column p-0 pt-3 weatherbox-container')
 
-  container.append(snowContainer(),headerContainer, InfoContainer)
+  container.append(snowContainer(), InfoContainer)
   return container
 }
 
