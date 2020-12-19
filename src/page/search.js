@@ -1,4 +1,3 @@
-import { data } from 'jquery'
 import {it} from '../module/main_module'
 
 const section = () => {
@@ -17,6 +16,7 @@ const section = () => {
   input.setAttribute('list', 'cityName')
   const datalist = it.is('datalist')
   datalist.id = "cityName";
+  
   const searchButton = it.is('button')
   searchButton.classes('ss-custom-btn')
   searchButton.id = 'ss'
