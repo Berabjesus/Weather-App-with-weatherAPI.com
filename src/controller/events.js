@@ -1,13 +1,12 @@
 import {it} from '../module/main_module';
 import {today, upcoming} from '../helpers/raw_html';
-import {getWeeklyWeatherInfo as getData} from '../api/weather_api'
+// import {getWeeklyWeatherInfo as getData} from '../api/weather_api'
 
 class Events {
   constructor() {
-    this.targetContainer = document.querySelector('.weatherbox-container');
-    this.loading = it.is('div');
-    this.loading.classes('laoding');
-    // console.log(this.targetContainer);
+    this.targetContainer;
+    this.loading;
+    this.getInputAndSearch = this.getInputAndSearch.bind(this)
   }
 
   setWeatherBox (){
@@ -15,6 +14,14 @@ class Events {
     container.classes('')
 
     this.weatherBox = container
+  }
+
+  update () {
+    console.log('asds');
+    this.targetContainer = document.querySelector('.weatherbox-container');
+    this.loading = it.is('div');
+    this.loading.classes('laoding');
+    console.log(this.targetContainer);
   }
   
   hideSearchBox(){
@@ -25,7 +32,9 @@ class Events {
     infoBox.style.height = '100vh'
   }
 
-  getInputAndSearch(){
+  getInputAndSearch() {
+    this.update();
+    
     const input = document.getElementById('searchInput')
     const filteredInput = input.value.trim()
     if(filteredInput.length === 0) {
@@ -37,7 +46,7 @@ class Events {
       input.classes('input-border')
     }
     // this.targetContainer.append(this.loading)
-    console.log(document.querySelector('.weatherbox-container'));
+    console.log(this.targetContainer);
   }
 
   getdataAndRender(){
@@ -46,6 +55,7 @@ class Events {
   }
   
 }
+
 const event = new Events
 
 export {event}
