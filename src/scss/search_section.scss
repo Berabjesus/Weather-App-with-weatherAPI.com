@@ -25,6 +25,6 @@ $button_size: 80px;
   &:hover {
     @include setBorder(3px, solid, white);
     box-shadow: 1px 1px 10px rgba(41, 40, 40, 0.5);
-    font-size: 22px;
+    transform: scale(1.2);
   }
 }

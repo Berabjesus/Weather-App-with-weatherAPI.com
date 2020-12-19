@@ -19,6 +19,7 @@ const section = () => {
   datalist.id = "cityName";
   const searchButton = it.is('button')
   searchButton.classes('ss-custom-btn')
+  searchButton.id = 'ss'
   searchButton.innerText = 'Search'
   formGroup.append(input)
   inputContainer.append(formGroup, datalist, searchButton)
