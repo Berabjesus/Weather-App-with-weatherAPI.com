@@ -1,11 +1,7 @@
 import {it} from '../module/main_module'
+import {event} from '../helpers/events'
 
-const section = () => {
-  const container = it.is('section')
-  container.classes('d-flex flex-column w-100 ss-search-container')
-  const header = it.is('h2')
-  header.innerText = '< aurApp />'
-
+const inputContainer = () => {
   const inputContainer = it.is('div')
   inputContainer.classes('row d-flex flex-column align-items-center px-2 pt-1 mt-1 pb-0 mb-0 h-100 position-relative')
   const formGroup = it.is('div')
@@ -14,17 +10,28 @@ const section = () => {
   input.classes('form-control px-3 ss-input-form')
   input.placeholder = 'Enter city or country name here'
   input.setAttribute('list', 'cityName')
+  formGroup.append(input)
+
   const datalist = it.is('datalist')
   datalist.id = "cityName";
-  
+
   const searchButton = it.is('button')
-  searchButton.classes('ss-custom-btn')
-  searchButton.id = 'ss'
   searchButton.innerText = 'Search'
-  formGroup.append(input)
+  searchButton.classes('ss-custom-btn font-weight-bolder')
+  searchButton.id = 'searchButton'
+  searchButton.addEventListener('click', event.getInputAndSearch)
   inputContainer.append(formGroup, datalist, searchButton)
 
-  container.append(header, inputContainer)
+  return inputContainer
+}
+
+const section = () => {
+  const container = it.is('section')
+  container.classes('d-flex flex-column w-100 ss-container')
+  const header = it.is('h2')
+  header.innerText = '< aurApp />'
+
+  container.append(header, inputContainer())
   return container
 }
 

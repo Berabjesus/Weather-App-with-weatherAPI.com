@@ -18,8 +18,12 @@ const section = () => {
   container.classes('d-flex flex-column is-container ')
   const header = it.is('h1')
   header.innerText = 'Information goes in here'
-  
-  container.append(snowContainer(), header)
+
+  const infoBoxcontainer = it.is('div')
+  infoBoxcontainer.classes('')
+  infoBoxcontainer.id = 'infoContainer'
+
+  container.append(snowContainer(), header, infoBoxcontainer)
   return container
 }
 
