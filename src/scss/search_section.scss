@@ -10,7 +10,6 @@
 }
 
 .ss-input-form {
-  @include setBorder(1px, solid, black);
   text-align: center;
   font-size: 30px;
   box-shadow: inset 1px 1px 10px rgb(185, 182, 182);
