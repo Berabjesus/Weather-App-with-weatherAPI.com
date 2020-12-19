@@ -1,6 +1,9 @@
 @import "./mixin_functions.scss";
+@import "./snow.scss";
 
 .is-container {
   position: relative;
   min-height: 70vh;
 }
+
+
