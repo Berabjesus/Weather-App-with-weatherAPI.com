@@ -15,15 +15,18 @@ const snowContainer = () => {
 
 const section = () => {
   const container = it.is('section')
-  container.classes('d-flex flex-column is-container ')
+  container.classes('row d-flex flex-column align-items-center is-container custom-border')
+
+  const headerContainer = it.is('div')
+  headerContainer.classes('text-center pt-5')
   const header = it.is('h1')
   header.innerText = 'Information goes in here'
+  headerContainer.append(header)
 
-  const infoBoxcontainer = it.is('div')
-  infoBoxcontainer.classes('')
-  infoBoxcontainer.id = 'infoContainer'
+  const InfoContainer = it.is('div')
+  InfoContainer.classes('col-12 col-md-9 d-flex flex-coulmn p-0 weather-box custom-border')
 
-  container.append(snowContainer(), header, infoBoxcontainer)
+  container.append(snowContainer(),headerContainer, InfoContainer)
   return container
 }
 
