@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');

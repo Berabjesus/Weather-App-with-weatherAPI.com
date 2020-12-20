@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+
 import '@babel/polyfill';
 import 'bootstrap';
 import './scss/main.scss';
