@@ -1,6 +1,6 @@
 # Appmosphere, weather app with weather API
 
-> This is a javascript project made to create a Weather app by fetching live weather updates and results from a provider through their API. This project also fetches suggestions for city or country. The page is dynamically rendered bu using JavaScript DOM manipulation. Only JavaScript is used to generate the entire contents of the website. 
+> This is a javascript project made to create a Weather app by fetching live weather updates and results from a provider through their API. This project also fetches suggestions for city or country. The page is dynamically rendered by using JavaScript DOM manipulation. Only JavaScript is used to generate the entire contents of the website. 
 
 ## Features
 
@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Click to see Appmosphere, Weather app live](https://raw.githack.com/Berabjesus/Weather-App-with-weatherAPI.com/working-branch/dist/index.html)
+[Click to see Appmosphere, Weather app live](https://rawcdn.githack.com/Berabjesus/Weather-App-with-weatherAPI.com/ee05d5d6e22162691e1c216e9fe6afc40174dcdd/dist/index.html)
 
 
 ## Built With
@@ -72,6 +72,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - Microverse
 - TheOdinProject
+- www.weatherapi.com
 
 ## 📝 License
 
