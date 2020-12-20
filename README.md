@@ -1,11 +1,11 @@
-# Appmosphere, Weather app with weather API
+# Appmosphere, weather app with weather API
 
-> This is a javascript project made to create a Weather app by fetching live weather updates and results from a provider through their API. This project also fetches suggestions for city or country. The page is dynamically rendered it using JavaScript DOM manipulation. Only JavaScript is used to generate the entire contents of the website. 
+> This is a javascript project made to create a Weather app by fetching live weather updates and results from a provider through their API. This project also fetches suggestions for city or country. The page is dynamically rendered bu using JavaScript DOM manipulation. Only JavaScript is used to generate the entire contents of the website. 
 
 ## Features
 
 - Weather information of any valid city
-- Suggestions of city or country names as you type
+- Suggestions for city or country names as a user types
 - Snow effect background with SCSS
 
 ## Built With
