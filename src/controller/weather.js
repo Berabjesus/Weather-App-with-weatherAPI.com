@@ -46,7 +46,7 @@ class weatherController {
     getData(filteredInput)
     .then(response => {
       if(response instanceof Error){
-        this.showError(response)
+        this.showError(response.status)
         return false
       }
       this.filterdata(response)
@@ -108,8 +108,6 @@ class weatherController {
   }
 
   renderCurrent(){
-    console.log(this.basicInfo);
-    console.log(this.today);
     this.targetContainer.innerHTML = ''
     this.targetContainer.innerHTML = (current(this.basicInfo, this.today))
   }

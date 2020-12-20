@@ -1,8 +1,8 @@
 const api_key = process.env.WEATHER_API_KEY;
 
-export const getWeeklyWeatherInfo = async city => {
+export const getSuggestions = async value => {
   try {
-    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}&days=7`)
+    const response = await fetch(`http://api.weatherapi.com/v1/search.json?key=${api_key}&q=${value}`)
     if(!response.ok){
       return response
     }

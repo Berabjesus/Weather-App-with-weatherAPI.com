@@ -5,6 +5,9 @@
 */
 
 /*  Borders  */
+datalist {
+  font-size: 1rem
+}
 
 .custom-border {
   @include setBorder(3px, dashed, red, '');

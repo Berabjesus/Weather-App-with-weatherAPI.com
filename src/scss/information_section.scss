@@ -13,20 +13,24 @@
 .weatherbox-container {
   width: 90%;
   margin-top: 3rem;
-  background-color: rgba(27, 27, 29, 0.753);
-  box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.527);
-  border-radius: 1rem;
 }
 
 .weather-box {
   min-height: 50vh;
   height: 100%;
-  margin-top: 3rem;
+  border-radius: 1rem;
+  border: 1px solid whitesmoke;
+  background-color: rgba(27, 27, 29, 0.753);
 }
 
 .weather-box * {
   white-space: pre-wrap;
   overflow-wrap: break-word;
+}
+
+.weather-box h4 {
+  font-weight: lighter;
+  margin-bottom: 10px;
 }
 
 .img {

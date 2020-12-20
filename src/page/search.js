@@ -1,5 +1,6 @@
 import {it} from '../module/main_module'
 import {weather} from '../controller/weather'
+import {suggestion} from '../controller/suggestion'
 
 const header = () => {
   const headerContainer = it.is('div')
@@ -20,16 +21,22 @@ const inputContainer = () => {
   inputContainer.classes('row d-flex flex-column align-items-center px-2 pt-1 mt-1 pb-0 mb-0 h-100 position-relative')
   const formGroup = it.is('div')
   formGroup.classes('form-group col-12 col-md-10 col-lg-7')
+  const info = it.is('p')
+  info.classes('mb-1')
+  info.id = 'inputInfo'
+  info.innerText = 'Type 3 letters to get suggestions'
   const input = it.is('input')
   input.classes('form-control px-3 ss-input-form input-border')
   input.id = 'searchInput'
   input.placeholder = 'Enter city or country name here'
   input.setAttribute('list', 'cityName')
-  formGroup.append(input)
+  input.addEventListener('keyup', suggestion.getInputForSuggestion)
+  formGroup.append(input, info)
 
   const datalist = it.is('datalist')
   datalist.id = "cityName";
-
+  datalist.classes('focus-off')
+  datalist.setAttribute('autocomplete', 'on')
   const searchButton = it.is('button')
   searchButton.innerText = 'Search'
   searchButton.classes('ss-custom-btn font-weight-bolder')

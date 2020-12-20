@@ -3,7 +3,7 @@ const currentWeatherBox = (basic,current) => {
   <div class="col-12 d-flex flex-column border-bottom border-white pb-3 wb-header">
     <h1>Day : ${current.day}</h1>
     <div class="d-flex flex-wrap">
-      <h1 class="p-0">${basic.city} / ${basic.country}</h1>
+      <h1 class="p-0">${basic.city}, ${basic.country}</h1>
       <small class="p-0 ml-3 align-self-end">lat : ${basic.lat} / long: ${basic.lon}</small>  
     </div>
   </div>
@@ -24,7 +24,7 @@ const currentWeatherBox = (basic,current) => {
   </div>
   <div class="col-12 col-md-6 py-3 d-flex flex-column">
     <h3 class="border-bottom border-white pb-2">Next two days</h3>
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column border-bottom border-white pb-2">
       <h3>${current.secondDay.day}</h3>
       <div class="d-flex flex-wrap">
         <h4 class="align-self-center">${current.secondDay.condition}</h4>
