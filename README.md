@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Click to see Appmosphere, Weather app live](https://raw.githack.com/Berabjesus/Weather-App-with-weatherAPI.com/working-branch/dist/index.html)
+[Click to see Appmosphere, Weather app live](https://rawcdn.githack.com/Berabjesus/Weather-App-with-weatherAPI.com/ee05d5d6e22162691e1c216e9fe6afc40174dcdd/dist/index.html)
 
 
 ## Built With
