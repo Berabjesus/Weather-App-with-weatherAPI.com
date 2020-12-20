@@ -1,5 +1,6 @@
-const currentWeatherBox = (basic,current) => {
-  return `   <div class=" row col-12 d-flex weather-box text-white">
+/* eslint-disable import/prefer-default-export */
+
+const currentWeatherBox = (basic, current) => `   <div class=" row col-12 d-flex weather-box text-white">
   <div class="col-12 d-flex flex-column border-bottom border-white pb-3 wb-header">
     <h1>Day : ${current.day}</h1>
     <div class="d-flex flex-wrap">
@@ -39,7 +40,6 @@ const currentWeatherBox = (basic,current) => {
       </div>
     </div>
   </div>
-</div>`
-}
+</div>`;
 
-export {currentWeatherBox as current}
+export { currentWeatherBox as current };

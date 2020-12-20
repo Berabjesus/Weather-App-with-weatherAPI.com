@@ -76,7 +76,7 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

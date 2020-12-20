@@ -15,9 +15,12 @@
   border-radius: 50%;
   background-color: $color;
   transition: all 0.2s linear;
-  &::before{
+
+  &::before {
     content: '';
+
     @include setBorder(2px, solid, black);
+
     position: absolute;
     z-index: -1;
     width: 20px;
@@ -28,14 +31,18 @@
     background-color: $glow;
     animation: grow 2s infinite ease-out;
   }
+
   &:hover::before {
     @include setBorder(2px, dotted, $color);
-    background-color:$color;
+
+    background-color: $color;
   }
+
   @keyframes grow {
-    50%{
+    50% {
       opacity: 0.8;
     }
+
     100% {
       width: 120px;
       height: 120px;
