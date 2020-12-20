@@ -33,7 +33,7 @@
 <img src="./public/ss2.JPG" width="auto" height="auto" />
 
 ### Mobile view
-<img src="./public/ss3.1.JPG" width="auto" height="auto" />
+<img src="./public/ss3.JPG" width="auto" height="auto" />
 
 ### Prerequisites
 - Web browser
