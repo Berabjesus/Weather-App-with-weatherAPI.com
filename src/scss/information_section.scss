@@ -5,13 +5,16 @@
 .is-container {
   position: relative;
   min-height: 70vh;
+  width: 100%;
+  overflow: hidden;
   transition: $transition-1;
 }
 
 .weatherbox-container {
-  margin-top: 6rem;
-  background-color: rgba(40, 39, 44, 0.521);
-  box-shadow: 1px 1px 10px black;
+  width: 90%;
+  margin-top: 3rem;
+  background-color: rgba(27, 27, 29, 0.753);
+  box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.527);
   border-radius: 1rem;
 }
 
@@ -19,4 +22,14 @@
   min-height: 50vh;
   height: 100%;
   margin-top: 3rem;
+}
+
+.weather-box * {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.img {
+  height: 80px;
+  width: 80px;
 }

@@ -1,5 +1,5 @@
 import {it} from '../module/main_module';
-import {today, upcoming} from '../helpers/raw_html';
+import {current} from '../helpers/render';
 import {getWeeklyWeatherInfo as getData} from '../api/weather_api'
 
 class weatherController {
@@ -9,8 +9,6 @@ class weatherController {
     this.filteredObject;
     this.basicInfo;
     this.today;
-    this.secondDay;
-    this.thirdDay;
     this.getInputAndSearch = this.getInputAndSearch.bind(this);
   }
 
@@ -20,13 +18,16 @@ class weatherController {
     this.loading.classes('align-self-center loading');
   }
   
-  // hideSearchBox(){
-  //   const searchBox = document.querySelector('.ss-container')
-  //   searchBox.style.height = '0px';
-  //   searchBox.innerHTML = ''
-  //   const infoBox = document.querySelector('.is-container')
-  //   infoBox.style.height = '100vh'
-  // }
+  showError(errorType) {
+    const errDiv = it.is('div')
+    errDiv.classes('mx-auto py-5 px-2')
+    const errMsg = it.is('h2')
+    errMsg.innerText = `Something went wrong, Make sure you are connected to the internet and the city name is correct. Error Info: - ${errorType}`
+    errMsg.classes('text-white')
+    errDiv.append(errMsg)
+    this,this.targetContainer.innerHTML = ''
+    this.targetContainer.append(errDiv)
+  }
 
   getInputAndSearch() {
     this.targetContainer ? true : this.update();
@@ -42,10 +43,20 @@ class weatherController {
       input.classes('input-border')
     }
     this.targetContainer.append(this.loading)
-    getData(filteredInput).then(response => {
+    getData(filteredInput)
+    .then(response => {
+      if(response instanceof Error){
+        this.showError(response)
+        return false
+      }
       this.filterdata(response)
       this.setBasicInfo()
       this.setTodayWeatherInfo()
+      this.renderCurrent()
+    })
+    .catch(error => {
+      this.showError(error)
+      return false
     })
   }
 
@@ -71,8 +82,8 @@ class weatherController {
     const current = this.filteredObject.current
     const forecast = this.filteredObject.forecast
     this.today = {
-      day: new Date(forecast.forecastday[0].date),
-      is_day : current.is_day,
+      day: (new Date(forecast.forecastday[0].date)).toDateString(),
+      is_day : parseInt(current.is_day) ? 'day' : 'night',
       temprature: current.temp_c,
       condition: current.condition.text,
       icon: current.condition.icon,
@@ -82,16 +93,26 @@ class weatherController {
       humidity: current.humidity,
       chance_of_rain: forecast.forecastday[0].day.daily_chance_of_rain,
       chance_of_snow: forecast.forecastday[0].day.daily_chance_of_snow,
-      moonphase: forecast.forecastday[0].astro.moon_phase
+      moonphase: forecast.forecastday[0].astro.moon_phase,
+      secondDay: {
+        day: (new Date(forecast.forecastday[1].date)).toDateString(),
+        condition: forecast.forecastday[1].day.condition.text,
+        icon:forecast.forecastday[1].day.condition.icon,
+      },
+      thirdDay: {
+        day: (new Date(forecast.forecastday[2].date)).toDateString(),
+        condition: forecast.forecastday[2].day.condition.text,
+        icon:forecast.forecastday[2].day.condition.icon,
+      }
     }
   }
 
-  getdataAndRender(data){
+  renderCurrent(){
+    console.log(this.basicInfo);
+    console.log(this.today);
     this.targetContainer.innerHTML = ''
-    this.targetContainer.innerHTML = data
-    console.log(data);
+    this.targetContainer.innerHTML = (current(this.basicInfo, this.today))
   }
-  
 }
 
 const weather = new weatherController

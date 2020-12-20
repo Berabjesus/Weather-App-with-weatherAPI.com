@@ -15,10 +15,10 @@ const snowContainer = () => {
 
 const section = () => {
   const container = it.is('section')
-  container.classes('row d-flex flex-column align-items-center is-container')
+  container.classes('row d-flex flex-column align-items-center pb-5 is-container')
 
   const InfoContainer = it.is('div')
-  InfoContainer.classes('col-12 col-md-9 row d-flex flex-column p-0  weatherbox-container')
+  InfoContainer.classes('d-flex flex-column p-0 weatherbox-container')
 
   container.append(snowContainer(), InfoContainer)
   return container

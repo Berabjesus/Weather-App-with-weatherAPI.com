@@ -4,12 +4,7 @@ import './scss/main.scss';
 import {search} from './page/search';
 import {information} from './page/information';
 
-import {getWeeklyWeatherInfo} from './api/weather_api'
-
 const main = document.querySelector('.main')
-// main.classList.add('custom-border')
 main.append(search(), information())
 const body = document.querySelector('.body')
 body.prepend(main)
-
-// console.log(getWeeklyWeatherInfo('addis ababa'))
