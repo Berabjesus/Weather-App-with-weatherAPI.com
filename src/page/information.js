@@ -18,7 +18,7 @@ const section = () => {
   container.classes('row d-flex flex-column align-items-center is-container')
 
   const InfoContainer = it.is('div')
-  InfoContainer.classes('col-12 col-md-9 row d-flex flex-column p-0 pt-3 weatherbox-container')
+  InfoContainer.classes('col-12 col-md-9 row d-flex flex-column p-0  weatherbox-container')
 
   container.append(snowContainer(), InfoContainer)
   return container

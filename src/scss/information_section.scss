@@ -9,13 +9,14 @@
 }
 
 .weatherbox-container {
-  margin-top: 3rem;
+  margin-top: 6rem;
+  background-color: rgba(40, 39, 44, 0.521);
+  box-shadow: 1px 1px 10px black;
+  border-radius: 1rem;
 }
 
 .weather-box {
   min-height: 50vh;
-  border: 3px dashed rgb(123, 255, 0);
-  border-radius: 1rem;
-  box-shadow: 1px 1px 10px black;
-  background-color: #fff;
+  height: 100%;
+  margin-top: 3rem;
 }

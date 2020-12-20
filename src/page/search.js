@@ -1,5 +1,5 @@
 import {it} from '../module/main_module'
-import {event} from '../controller/events'
+import {weather} from '../controller/weather'
 
 const header = () => {
   const headerContainer = it.is('div')
@@ -34,7 +34,7 @@ const inputContainer = () => {
   searchButton.innerText = 'Search'
   searchButton.classes('ss-custom-btn font-weight-bolder')
   searchButton.id = 'searchButton'
-  searchButton.addEventListener('click', event.getInputAndSearch)
+  searchButton.addEventListener('click', weather.getInputAndSearch)
   inputContainer.append(formGroup, datalist, searchButton)
 
   return inputContainer
