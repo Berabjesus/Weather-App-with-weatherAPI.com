@@ -8,6 +8,11 @@
 - Suggestions for city or country names as a user types
 - Snow effect background with SCSS
 
+## Live Demo
+
+[Click to see Appmosphere, Weather app live](https://raw.githack.com/Berabjesus/Weather-App-with-weatherAPI.com/working-branch/dist/index.html)
+
+
 ## Built With
 
 - JavaScript
@@ -20,10 +25,6 @@
 - npm
 - Eslint
 - StyleLint
-
-## Live Demo
-
-[Click to see Appmosphere, Weather app live](https://raw.githack.com/Berabjesus/Weather-App-with-weatherAPI.com/working-branch/dist/index.html)
 
 # ScreenShots
 ### Home Page
