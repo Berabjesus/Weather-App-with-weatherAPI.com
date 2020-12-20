@@ -23,17 +23,17 @@
 
 ## Live Demo
 
-[Click to see Appmosphere, Weather app live]()
+[Click to see Appmosphere, Weather app live](https://raw.githack.com/Berabjesus/Weather-App-with-weatherAPI.com/working-branch/dist/index.html)
 
 # ScreenShots
 ### Home Page
-<img src="./public/ss1.JPG" width="auto" height="auto" />
+<img src="./public/s1.JPG" width="auto" height="auto" />
 
 ### Search Page
-<img src="./public/ss2.JPG" width="auto" height="auto" />
+<img src="./public/s2.JPG" width="auto" height="auto" />
 
 ### Mobile view
-<img src="./public/ss3.JPG" width="auto" height="auto" />
+<img src="./public/s3.JPG" width="auto" height="auto" />
 
 ### Prerequisites
 - Web browser
