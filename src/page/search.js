@@ -6,7 +6,7 @@ const header = () => {
   const headerContainer = it.is('div')
   headerContainer.classes('d-flex flex-column pl-2')
   const brand = it.is('h2')
-  brand.innerText = 'Apprella'
+  brand.innerText = 'Appmosphere'
 
   const header = it.is('h6')
   header.classes('text-dark mb-1')
