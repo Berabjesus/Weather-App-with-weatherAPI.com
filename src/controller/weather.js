@@ -108,7 +108,7 @@ class WeatherController {
       is_day: parseInt(current.is_day, 10) ? 'day' : 'night',
       temprature: current.temp_c,
       condition: current.condition.text,
-      icon: current.condition.icon,
+      icon:'https:'+current.condition.icon,
       wind: current.wind_mph,
       wind_direction: current.wind_dir,
       wind_degree: current.wind_degree,
@@ -119,12 +119,12 @@ class WeatherController {
       secondDay: {
         day: (new Date(forecast.forecastday[1].date)).toDateString(),
         condition: forecast.forecastday[1].day.condition.text,
-        icon: forecast.forecastday[1].day.condition.icon,
+        icon: 'https:'+forecast.forecastday[1].day.condition.icon,
       },
       thirdDay: {
         day: (new Date(forecast.forecastday[2].date)).toDateString(),
         condition: forecast.forecastday[2].day.condition.text,
-        icon: forecast.forecastday[2].day.condition.icon,
+        icon: 'https:'+forecast.forecastday[2].day.condition.icon,
       },
     };
   }
