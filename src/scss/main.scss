@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./reset.scss";
+@import "./mixin_functions.scss";
+@import "./globals.scss";
+@import "./search_section.scss";
+@import "./information_section.scss";
+
+.body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.main {
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.445);
+}
