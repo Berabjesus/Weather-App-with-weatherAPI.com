@@ -18,7 +18,7 @@ class WeatherController {
   update() {
     this.targetContainer = document.querySelector('.weatherbox-container');
     this.loading = it.is('div');
-    this.loading.classes('align-self-center loading');
+    this.loading.classes('align-self-center mt-4 loading');
   }
 
   showError(errorType) {
@@ -30,6 +30,23 @@ class WeatherController {
     errDiv.append(errMsg);
     this.targetContainer.innerHTML = '';
     this.targetContainer.append(errDiv);
+  }
+
+  convertTemp() {
+    const toggle = document.getElementById('toggleTemp')
+    const type = document.getElementById("tempType")
+    const value = document.getElementById('tempValue')
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        const degFar = ((parseInt(value.innerText, 10) * 9/5) + 32)
+        value.innerText = Math.round(degFar)
+        type.innerText = 'F'
+      } else {
+        const degCel = ((parseInt(value.innerText, 10) - 32) * 5/9)
+        value.innerText = Math.round(degCel)
+        type.innerText = 'C' 
+      }
+    });
   }
 
   getInputAndSearch() {
@@ -115,6 +132,7 @@ class WeatherController {
   renderCurrent() {
     this.targetContainer.innerHTML = '';
     this.targetContainer.innerHTML = (current(this.basicInfo, this.today));
+    this.convertTemp()
   }
 }
 

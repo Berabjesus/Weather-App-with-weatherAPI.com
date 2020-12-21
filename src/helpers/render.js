@@ -16,7 +16,17 @@ const currentWeatherBox = (basic, current) => `   <div class=" row col-12 d-flex
       <h4 class="align-self-center">${current.condition}</h4>
       <img class="ml-3 img" src="${current.icon}" alt="">
     </div>
-    <h4>Temprature : ${current.temprature}<sup>o</sup>C</h4>
+    <div class ="d-flex">
+      <h4>Temprature : <strong id="tempValue">${current.temprature}</strong><sup>o</sup> <strong id="tempType">C</strong></h4>
+      <div class="d-flex position-relative align-items-center mx-auto">
+        <h4><sup class="align-self-start">o</sup>C</h4>
+        <label class="switch align-self-center ml-3">
+          <input id="toggleTemp" type="checkbox"/> 
+          <div></div>
+        </label>  
+        <h4><sup class="ml-3 align-self-start">o</sup>F</h4>
+      </div>
+    </div>
     <h4>Wind : ${current.wind} mph, wind direction : ${current.wind_direction} and wind degree : ${current.wind_degree}</h4>
     <h4>Humidity : ${current.humidity} degrees</h4>
     <h4>Chance of rain : ${current.chance_of_rain} %</h4>
