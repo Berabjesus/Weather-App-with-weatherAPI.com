@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable func-names */
 
 import { it } from '../module/main_module';
 import { current } from '../helpers/render';
@@ -33,18 +35,18 @@ class WeatherController {
   }
 
   convertTemp() {
-    const toggle = document.getElementById('toggleTemp')
-    const type = document.getElementById("tempType")
-    const value = document.getElementById('tempValue')
-    toggle.addEventListener('change', function() {
+    const toggle = document.getElementById('toggleTemp');
+    const type = document.getElementById('tempType');
+    const value = document.getElementById('tempValue');
+    toggle.addEventListener('change', function () {
       if (this.checked) {
-        const degFar = ((parseInt(value.innerText, 10) * 9/5) + 32)
-        value.innerText = Math.round(degFar)
-        type.innerText = 'F'
+        const degFar = ((parseInt(value.innerText, 10) * (9 / 5)) + 32);
+        value.innerText = Math.round(degFar);
+        type.innerText = 'F';
       } else {
-        const degCel = ((parseInt(value.innerText, 10) - 32) * 5/9)
-        value.innerText = Math.round(degCel)
-        type.innerText = 'C' 
+        const degCel = ((parseInt(value.innerText, 10) - 32) * (5 / 9));
+        value.innerText = Math.round(degCel);
+        type.innerText = 'C';
       }
     });
   }
@@ -108,7 +110,7 @@ class WeatherController {
       is_day: parseInt(current.is_day, 10) ? 'day' : 'night',
       temprature: current.temp_c,
       condition: current.condition.text,
-      icon:'https:'+current.condition.icon,
+      icon: `https:${current.condition.icon}`,
       wind: current.wind_mph,
       wind_direction: current.wind_dir,
       wind_degree: current.wind_degree,
@@ -119,12 +121,12 @@ class WeatherController {
       secondDay: {
         day: (new Date(forecast.forecastday[1].date)).toDateString(),
         condition: forecast.forecastday[1].day.condition.text,
-        icon: 'https:'+forecast.forecastday[1].day.condition.icon,
+        icon: `https:${forecast.forecastday[1].day.condition.icon}`,
       },
       thirdDay: {
         day: (new Date(forecast.forecastday[2].date)).toDateString(),
         condition: forecast.forecastday[2].day.condition.text,
-        icon: 'https:'+forecast.forecastday[2].day.condition.icon,
+        icon: `https:${forecast.forecastday[2].day.condition.icon}`,
       },
     };
   }
@@ -132,7 +134,7 @@ class WeatherController {
   renderCurrent() {
     this.targetContainer.innerHTML = '';
     this.targetContainer.innerHTML = (current(this.basicInfo, this.today));
-    this.convertTemp()
+    this.convertTemp();
   }
 }
 
