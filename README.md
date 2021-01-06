@@ -5,7 +5,7 @@
 ## Features
 
 - Weather information of any valid city
-- Suggestions for city or country names as a user types
+- Suggestions for city or country names as a user types in a city or country
 - Snow effect background with SCSS
 
 ## Live Demo
